@@ -1,0 +1,94 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  width: 100vw;
+  height: 100dvh;
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.download {
+  width: 5rem;
+  height: fit-content;
+  padding: 0.2rem;
+  background-color: #d1a86a;
+  border: 0;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.file-upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 20px;
+}
+
+.file-input {
+  display: none;
+}
+
+.custom-file-label,
+.download-button input[type="button"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  box-shadow: 0px 6px 0px #388e3c, 0px 9px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+  transform-style: preserve-3d;
+}
+
+.custom-file-label:hover,
+.download-button input[type="button"]:hover {
+  background-color: #45a049;
+  box-shadow: 0px 8px 0px #2e7d32, 0px 12px 30px rgba(0, 0, 0, 0.4);
+  transform: translateZ(10px) rotateX(10deg) rotateY(5deg);
+}
+
+.custom-file-label:active,
+.download-button input[type="button"]:active {
+  transform: translateY(4px) translateZ(2px) rotateX(0deg) rotateY(0deg);
+  box-shadow: 0px 4px 0px #2e7d32, 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.custom-file-label:after,
+.download-button input[type="button"]:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  transform: translateZ(-20px);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.custom-file-label:hover:after,
+.download-button input[type="button"]:hover:after {
+  opacity: 1;
+  transform: translateZ(-40px);
+}
